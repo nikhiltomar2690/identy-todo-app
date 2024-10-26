@@ -7,7 +7,8 @@
     <span class="block text-gray-300 text-lg sm:text-2xl">with DatePicker</span>
   </div>
 
-  <!-- Date Picker and New Todo Input -->
+  <!-- container div that contains the date picker and the input for new todos -->
+  <!-- the default state for any todo is pending -->
   <div
     class="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg max-w-md mx-auto transition-all duration-300 ease-in-out transform hover:scale-105"
   >
@@ -40,12 +41,12 @@
     </div>
   </div>
 
-  <!-- Display Todos Grouped by Date in Separate Cards -->
+  <!-- container div that contains all the dates with their corresponding todos -->
   <div
     *ngFor="let date of sortedDates()"
     class="p-5 rounded-lg shadow-lg space-y-4"
   >
-    <!-- Date Header -->
+    <!-- this part shows the date and the number of todos for that date -->
     <div class="flex items-center justify-between">
       <h3 class="text-lg sm:text-xl font-semibold text-gray-400">
         {{ date | date : "EEEE, MMM d, yyyy" }}
@@ -55,7 +56,7 @@
       </span>
     </div>
 
-    <!-- List of Todos for the Selected Date -->
+    <!-- this part shows the corresponding todos for a specific date -->
     <ul class="space-y-3">
       <li
         *ngFor="let todo of todos[date]"
