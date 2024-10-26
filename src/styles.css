@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Lexend:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: url("https://img.freepik.com/premium-photo/black-background-with-blue-lights_327903-9819.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.transition-all {
+  transition: all 0.2s ease;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  filter: blur(40px);
+  z-index: -1;
+}
+
+.title {
+  font-family: "Lexend", sans-serif;
+}
